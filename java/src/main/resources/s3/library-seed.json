@@ -1,0 +1,23 @@
+{
+  "books": [
+    { "id": "b-1", "title": "Domain-Driven Design", "author": "Eric Evans" },
+    { "id": "b-2", "title": "Clean Architecture", "author": "Robert C. Martin" },
+    { "id": "b-3", "title": "Refactoring", "author": "Martin Fowler" },
+    { "id": "b-4", "title": "Growing Object-Oriented Software, Guided by Tests", "author": "Steve Freeman, Nat Pryce" },
+    { "id": "b-5", "title": "Working Effectively with Legacy Code", "author": "Michael Feathers" },
+    { "id": "b-6", "title": "The Pragmatic Programmer", "author": "David Thomas, Andrew Hunt" },
+    { "id": "b-7", "title": "Patterns of Enterprise Application Architecture", "author": "Martin Fowler" },
+    { "id": "b-8", "title": "Implementing Domain-Driven Design", "author": "Vaughn Vernon" }
+  ],
+  "members": [
+    { "id": "m-1", "name": "Ada Lovelace", "tier": "STANDARD" },
+    { "id": "m-2", "name": "Linus Torvalds", "tier": "STANDARD" },
+    { "id": "m-3", "name": "Grace Hopper", "tier": "PREMIUM" }
+  ],
+  "loans": [
+    { "id": "l-1", "bookId": "b-2", "memberId": "m-2", "borrowedOn": "2026-09-25", "dueOn": "2026-10-09" },
+    { "id": "l-2", "bookId": "b-3", "memberId": "m-2", "borrowedOn": "2026-09-25", "dueOn": "2026-10-09" },
+    { "id": "l-3", "bookId": "b-4", "memberId": "m-2", "borrowedOn": "2026-09-25", "dueOn": "2026-10-09" },
+    { "id": "l-4", "bookId": "b-5", "memberId": "m-3", "borrowedOn": "2026-01-05", "dueOn": "2026-02-02" }
+  ]
+}

@@ -1,0 +1,29 @@
+# Which adapters plug into the hexagon.
+# Change these two lines and nothing else: the domain and the use cases stay untouched.
+library:
+  adapters:
+    inbound: rest     # rest | kafka
+    outbound: s3      # s3 | sqlite
+
+  # Settings of the S3 adapter (used when outbound = s3)
+  s3:
+    endpoint: http://localhost:9090   # S3Mock from compose.yaml; remove to use AWS
+    region: us-east-1
+    bucket: library
+    key: library.json
+    access-key: test
+    secret-key: test
+    seed-if-missing: true
+
+  # Settings of the SQLite adapter (used when outbound = sqlite)
+  sqlite:
+    url: jdbc:sqlite:library.db
+
+spring:
+  application:
+    name: library
+  # Settings of the Kafka adapter (used when inbound = kafka)
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      auto-offset-reset: earliest

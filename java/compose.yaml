@@ -1,0 +1,15 @@
+# Local infrastructure for running the application by hand.
+#   docker compose up -d
+#   ./mvnw spring-boot:run
+services:
+  s3:
+    image: adobe/s3mock:5.2.3
+    ports:
+      - "9090:9090"
+    environment:
+      COM_ADOBE_TESTING_S3MOCK_STORE_INITIAL_BUCKETS: library
+
+  kafka:
+    image: apache/kafka-native:4.1.0
+    ports:
+      - "9092:9092"
