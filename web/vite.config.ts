@@ -6,7 +6,8 @@ import react from '@vitejs/plugin-react'
 const repoRoot = fileURLToPath(new URL('..', import.meta.url))
 
 export default defineConfig({
-  base: process.env.BASE_PATH ?? '/hexagonal-101/',
+  // Root by default (Vercel, local preview); the GitHub Pages workflow sets BASE_PATH=/<repo>/.
+  base: process.env.BASE_PATH ?? '/',
   plugins: [react()],
   server: {
     fs: { allow: [repoRoot] },

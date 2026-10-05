@@ -68,4 +68,4 @@ npm run build      # static site in web/dist
 
 The site imports the sources from `../java` at build time (`web/src/project/sources.ts`). Change the Java code and the site shows the new version. The explanations and key lines live in `web/src/content/annotations.ts`, and the steps of the request animation live in `web/src/content/flow.ts`. Key lines are matched by substring, not by line number, so they survive code edits.
 
-Pushing to `main` deploys the site to GitHub Pages (`.github/workflows/deploy.yml`).
+Pushing to `master` deploys the site to GitHub Pages (`.github/workflows/deploy.yml`).
